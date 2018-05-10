@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<!--
+Created using JS Bin
+http://jsbin.com
+
+Copyright (c) 2018 by NoeLiu (http://jsbin.com/wakalel/1/edit)
+
+Released under the MIT license: http://jsbin.mit-license.org
+-->
+<meta name="robots" content="noindex">
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+<style id="jsbin-css">
+*{
+  box-sizing:border-box;
+}
+.header{
+  background-color:black;
+}
+.header p{
+  color:white;
+  margin-left:auto;
+  margin-right:auto;
+  width:600px;
+}
+
+.main p{
+  margin-left:auto;
+  margin-right:auto;
+  width:600px;
+  height=104px;
+}
+
+.goods{
+  margin-left:auto;
+  margin-right:auto;
+  width:600px;
+  list-style:none;
+  padding:0px;
+}
+ul.goods li{
+ width:180px;
+ height:40px;
+ border:3px solid;
+ background-color:pink;
+ margin-bottom:15px;
+ line-height:40px;
+ font-size:0.9em;
+}
+ul.goods li:nth-child(n+5){
+  margin-left:210px;
+}
+ul.goods li:nth-child(n+9){
+  margin-left:420px;
+}
+ul.goods li:nth-child(4n+5){
+  margin-top:-220px;
+}
+ul.goods li:hover{
+  background-color:red;
+}
+
+.underline li{
+  border-bottom:1px dotted;
+  list-style:none;
+  margin-bottom:-1px;
+}
+.underline{
+  overflow:hidden;
+    margin-left:auto;
+  margin-right:auto;
+  width:600px;
+    padding:0px;
+}
+
+
+
+div.foot{
+   background-color:violet;
+  
+}
+.foot p:first-child,.foot p:last-child{
+text-align:center;
+}
+</style>
+</head>
+<body>
+<div class="header">
+  <p>hello world 请调整浏览器窗口大小查看</p>
+</div>
+<div class="main">
+ <p>页面主体宽度 600px  页面主体宽度 600px  
+  页面主体宽度 600px 页面主体宽度 600px 页面主体宽度 600px 页面主体宽度 600px 页面主体宽度 600px 页面主体宽度 600px 页面主体宽度 600px 页面主体宽度 600px 页面主体宽度 600px 页面主体宽度 600px 页面主体宽度 600px 页面主体宽度 600px 页面主体宽度 600px 页面主体宽度 600px 页面主体宽度 600px 页面主体宽度 600px</p>
+</div>
+<ul class="goods">
+    <li>宽180高40（包含边框）</li>
+    <li>水平间隙30px</li>
+    <li>垂直间隙15px</li>
+    <li>边框宽度3px</li>
+    <li>产品</li>
+    <li>产品</li>
+    <li>产品</li>
+    <li>产品</li>
+    <li>产品</li>
+    <li>产品</li>
+    <li>产品</li>
+    <li>产品</li>
+</ul>
+ <ul class="underline">
+   <li>link</li>
+   <li>link</li>
+   <li>link</li>
+   <li>link</li>
+   <li>link</li>
+ </ul>
+  
+  <div class="foot">
+     <p>&copy;版权所有<span></span></p>
+     <p>本页所有布局均使用块元素<span></span></p>
+  </div>
+  
+  
+  
+  
+</body>
+</html>
