@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>苹果按钮</title>
+    <link rel="shortcut icon" href="https://pic.qqtn.com/up/2017-11/2017112717315135043.jpg" />
+    <!-- <meta http-equiv="refresh" content="5"> -->
+    <style>
+        *{
+            margin: 0px;
+        }
+    #checkbox-a{
+        width: 200px;
+        height: 100px;
+        background-color:silver;
+        border-radius:9999px;
+        position: relative;
+        top: 100px;
+        left: 100px;
+        transition-property: background-color;
+        transition-duration: 0.5s;
+        transition-timing-function: linear;
+   }
+    #checkbox-b{
+        width: 80px;
+        height: 80px;
+        background-color: white;
+        border-radius: 9999px;
+        xborder: 1px solid black;
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        transition-property: left;
+        transition-timing-function: cubic-bezier(.81,-0.39,.18,1.39);
+        transition-duration: 0.5s;
+        z-index: 3;
+    }
+    #checkbox-c{
+        width: 150px;
+        height: 75px;
+        background-color:silver;
+        position:absolute;
+        top: 12.5px;
+        left:25px;
+        border-radius: 9999px;  
+        transition-property: z-index;
+        transition-duration: 10s;
+    }
+    #click:checked+label #checkbox-a{
+        background-color:green;
+    }    
+    #click:checked+label #checkbox-b{
+        left:110px;
+    }
+    #click:checked+label #checkbox-c{
+        background-color: green;       
+    }   
+    #click{
+        display: none;
+    }
+
+    #checkbox-b:active{
+        width:100px;
+    }
+    </style>
+</head>
+<body>
+     <input type="checkbox" id="click">
+            <label for="click"> 
+                <section id="checkbox-a">
+                    <div id="checkbox-c"></div>
+                    <div id="checkbox-b"></div>
+                </section>  
+            </label> 
+    
+</body>
+</html>
