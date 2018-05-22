@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="5">
+    <title>Document</title>
+    <style>
+        /* **********************table****************************** */
+        table{
+            display: table;
+            border-collapse: collapse;
+            width: 800px;
+            margin:50px auto;  
+        }
+        tr{
+            border-top: 1px solid rgb(226,226,230);
+            text-align: left;
+        }
+        tbody tr:nth-child(1){
+            border-top:2px solid rgb(226,226,230);
+        }
+        .table td,.table th{
+            padding: 0.75rem;
+         
+        }
+        /* **********************table-strped****************************** */    
+        .table-striped tbody tr:nth-child(odd){
+           background-color:rgb(242, 242, 242);
+        }    
+        /* **********************table-bordered****************************** */ 
+        .table-bordered td,.table-bordered th{
+            border:1px solid rgb(226,226,230);
+        }
+        /* **********************table-hover****************************** */
+        .table-hover tbody tr:hover{
+            background-color: rgb(242, 242, 242);
+        }         
+        /* **********************table-responsive****************************** */
+        .table-responsive{
+            line-height:3;
+            width: 600px;
+            height: 300px;
+            display: block;
+            overflow: scroll;
+        }
+        /* **********************input****************************** */
+        div{
+            display: table;
+            border-collapse: collapse;
+            width: 100%; 
+            border:1px solid rgb(206,212,218); 
+            border-radius:6px; 
+        }     
+        span,input{
+            display: table-cell;
+        }
+        span{
+            background-color: rgb(233,236,239); 
+            width: 1%; 
+            border:1px solid rgb(206,212,218);
+            xborder-radius:6px;     
+        }
+        input{
+            font:inherit;
+            width: 100%;
+            border-style: hidden;
+        }
+    </style>
+</head>
+<body>
+    <!-- **********************table****************************** -->
+    <table class="table">
+            <thead>
+              <!-- <caption>table</caption> -->
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">First</th>
+                <th scope="col">Last</th>
+                <th scope="col">Handle</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>@fat</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td>Larry</td>
+                <td>the Bird</td>
+                <td>@twitter</td>
+              </tr>
+            </tbody>
+          </table>
+      <br>
+      <hr>
+      <br>
+    <!-- **********************table-strped****************************** -->
+      <table class="table table-striped">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">First</th>
+                <th scope="col">Last</th>
+                <th scope="col">Handle</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>@fat</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td>Larry</td>
+                <td>the Bird</td>
+                <td>@twitter</td>
+              </tr>
+            </tbody>
+          </table>    
+</body>
+<br>
+<hr>
+<br>
+<!-- **********************table-bordered****************************** -->
+<table class="table table-bordered">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">First</th>
+            <th scope="col">Last</th>
+            <th scope="col">Handle</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Jacob</td>
+            <td>Thornton</td>
+            <td>@fat</td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td colspan="2">Larry the Bird</td>
+            <td>@twitter</td>
+          </tr>
+        </tbody>
+      </table>
+      <br>
+      <hr>
+      <br>
+      <!-- **********************table-hover****************************** -->
+      <table class="table table-hover">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">First</th>
+                <th scope="col">Last</th>
+                <th scope="col">Handle</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>@fat</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td colspan="2">Larry the Bird</td>
+                <td>@twitter</td>
+              </tr>
+            </tbody>
+          </table>
+          <br>
+          <hr>
+          <br> 
+      <!-- **********************table-responsive****************************** -->
+      <table class="table table-responsive">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Heading</th>
+                <th scope="col">Heading</th>
+                <th scope="col">Heading</th>
+                <th scope="col">Heading</th>
+                <th scope="col">Heading</th>
+                <th scope="col">Heading</th>
+                <th scope="col">Heading</th>
+                <th scope="col">Heading</th>
+                <th scope="col">Heading</th>                
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>Cell</td>
+                <td>Cell</td>
+                <td>Cell</td>
+                <td>Cell</td>
+                <td>Cell</td>
+                <td>Cell</td>
+                <td>Cell</td>
+                <td>Cell</td>
+                <td>Cell</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>Cell</td>
+                <td>Cell</td>
+                <td>Cell</td>
+                <td>Cell</td>
+                <td>Cell</td>
+                <td>Cell</td>
+                <td>Cell</td>
+                <td>Cell</td>
+                <td>Cell</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td>Cell</td>
+                <td>Cell</td>
+                <td>Cell</td>
+                <td>Cell</td>
+                <td>Cell</td>
+                <td>Cell</td>
+                <td>Cell</td>
+                <td>Cell</td>
+                <td>Cell</td>
+              </tr>
+            </tbody>
+          </table>
+          <br>
+          <hr>
+          <br>
+<!--         **********************input******************************       -->    
+       <div>
+           <span>@</span>
+           <input type="text" placeholder="Username">
+       </div> 
+       <br>
+       <br>     
+       <div>
+           <input type="text" placeholder="Recipient's username">
+           <span>@example.com</span>
+       </div>
+</html>
