@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>画图</title>
+  <style>
+    canvas {
+      border: 2px solid #f0f;
+      display: block;
+      margin: auto;
+    }
+  </style>
+</head>
+<body>
+  <canvas width="400" height="300"></canvas>
+</body>
+<script>
+  var cvs = document.querySelector('canvas')
+  var ctx = cvs.getContext('2d')
+
+  function dot(x, y, color = 'black') {
+    ctx.fillStyle = color
+    ctx.fillRect(x, y, 1, 1)
+  }
+</script>
+<script>
+  for(var x = 0;x < 400;x++){
+    dot(x,20,'hsl('+x+',80%,80%)')
+  }
+  for(var x = 0;x < 400;x+=2){
+    dot(x,40,'black')
+  }
+  for(var x = 0;x < 400;x+=4){
+    dot(x,60,'black')
+    dot(x+1,60,'black')
+  }
+  for(var x = 0;x < 400;x++){
+    if(x % 15 < 4){
+      dot(x,80)
+    }else if(x % 15 < 12){
+      dot(x,80,'red')
+    }
+  }
+  for(var x = 0;x < 400;x+=0.01){
+    dot(x*5,parseInt(x)*5)
+  }//????????????????????????
+  for(var x = 0;x < 400;x++){
+    dot(x,0.75*x,'hsl('+x+',80%,80%)')
+  }
+    for(var x = 200;x < 250;x++ ){
+    for(var y = 200;y < 250;y++){
+      dot(x,y,'hsl('+x * y+',80%,80%)')
+    }
+  }
+    //画圆法1(检索整张图上与点距离相痛的点，但是看起来很少，这个时候变成范围，变粗一点就能看了)
+  var cx = 150
+  var cy = 100
+  var r = 30
+  for(var x = 0;x < 400;x++ ){
+    for(var y = 0;y < 300;y++){
+      var distance = (x - cx)**2 +(y - cy)**2
+      if(Math.abs(distance - r**2) < 60)
+      dot(x,y)
+    }
+  }
+  //画圆法2(根据公式算出x以及y，其实相当于画了两个圆才算能看，这种方法垃圾)
+  var r = 30
+  for(var x = -r;x < r;x++){
+    var y = Math.sqrt(r**2 - x**2)
+    dot(x + 250,y + 100)
+    dot(x + 250,-y + 100)
+  }
+  for(var y = -r;y < r;y++){
+    var x = Math.sqrt(r**2 - y**2)
+    dot(x + 250,y + 100)
+    dot(-x + 250,y + 100)
+  }
+  //画法3(这种方法最好)
+  for(var theta = 0;theta < 6.28;theta+=0.01){
+    var x = Math.sin(theta) * r +250
+    var y = Math.cos(theta) * r +200
+    dot(x,y)
+  }
+  //画线的方法(加法，也是电脑一般用的)
+  var m = 0
+  var n = 0
+  while(m < 300){
+    dot(m,n)
+    m += 1
+    n += 0.3
+  }
+  //画 RGB
+  for(var p = 0;p < 256;p++){
+    for(var q = 255;q >= 0;q--)
+    dot(p / 4 + 200,q / 4 + 100,"rgb(255," + q + "," + p + ")")
+  }
+  //画 RGB
+  for(var y = 200;y >= 100;y--){
+    for(var x = 300;x < 400;x++){
+      dot(x,y,'rgb(100%,' + (200 - y)+'%,' + (x - 300) + '%)')
+    }
+  }
+  //画 RGB
+  for(var y = 150;y >= 100;y--){
+    for(var x = 300;x < 350;x++){
+      dot(x,y,'rgb(255,' + (150 - y) / 50 * 256 + '%,' + (x- 300) / 50 * 256 + '%)')
+    }
+  }
+</script>
+</html>
