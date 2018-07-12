@@ -1,4 +1,4 @@
-var NoeLiu = {
+var noeliu = {
   chunk: function(array, size) {
 
   }
