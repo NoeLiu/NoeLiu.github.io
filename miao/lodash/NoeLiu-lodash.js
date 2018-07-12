@@ -1,5 +1,6 @@
 var noeliu = {
-  chunk: function(array, size) {
+    chunk: function(array, size = 1) {
 
-  }
+    }
 }
+
