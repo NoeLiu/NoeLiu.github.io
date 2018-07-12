@@ -1,4 +1,4 @@
-window['NoeLiu'] = {
+var NoeLiu = {
   chunk: function(array, size) {
 
   }
