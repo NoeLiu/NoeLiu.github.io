@@ -1,5 +1,5 @@
-var NoeLiu = {
-    chunk: function(array, size) {
-  
-    }
+window['NoeLiu'] = {
+  chunk: function(array, size) {
+
   }
+}
