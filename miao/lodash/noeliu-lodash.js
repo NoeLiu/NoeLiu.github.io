@@ -16,6 +16,9 @@ var noeliu = {
         }
         return result
     },
+    concat:function(array,other){
+        return array.concat(...other)
+    },
     property: function(propName){
         return function(obj){
             return obj[propName]
