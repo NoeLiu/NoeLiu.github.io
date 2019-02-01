@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>苹果按钮</title>
+    <link rel="shortcut icon" href="https://pic.qqtn.com/up/2017-11/2017112717315135043.jpg" />
+    <!-- <meta http-equiv="refresh" content="5"> -->
+    <style>
+        *{
+        margin: 0px;          
+        padding: 0px;
+        font-size: 0;
+        }
+    #lab-1{
+        display: inline-block;
+        width:200px;
+    }
+    #lab-2{
+        display: inline-block;
+        width: 100px;
+    }
+   /*  ***************苹果滑块****************************** */
+    #checkbox-a{
+        width: 200px;
+        height: 100px;
+        background-color:silver;
+        border-radius:9999px;
+        position: relative;
+        top: 0px;
+        left: 0px;
+        transition-property: background-color;
+        transition-duration: 1s;
+        transition-timing-function: linear;
+        transition-delay: 0.3s;
+   }
+    #checkbox-b{
+        display: inline-block;
+        width: 80px;
+        height: 80px;
+        background-color: white;
+        border-radius: 9999px;
+        border:1px solid silver;        
+        xborder: 1px solid black;
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        transition-property: all;
+        transition-timing-function: cubic-bezier(.81,-0.39,.18,1.39);
+        transition-duration: 1s;
+        box-shadow: 0,10px,0,10px,black;
+    }
+    #checkbox-c{
+        background-color:silver; 
+        position:absolute;
+        top: 0px;
+        left:0px;
+        height: 100px;
+        width: 200px;
+        border:1px solid silver;
+        border-radius: 9999px;  
+        transition-duration: 0.8s;
+        transition-property: all;
+        transition-timing-function: cubic-bezier(.84,.43,.83,.52) ;
+    }
+    #click:checked+label #checkbox-a{
+        background-color:green;
+    }    
+    #click:checked+label #checkbox-b{
+        left:110px;
+    }
+    #click:checked+label #checkbox-c{
+        width: 0px;
+        height: 0px;
+        position:absolute;
+        top: 50px;
+        left:140px;
+    }   
+    #click{
+        display: none;
+    }
+    #click:checked+label #checkbox-b:active{
+        left:90px;
+        width: 100px;
+    }
+    #checkbox-b:active{
+        width: 110px;
+    }
+    #checkbox-a:active{
+        background-color: white;
+    }    
+    /* ****************点赞******************************** */
+    #star{
+        xdisplay: inline-block;
+        background-image: url(https://abs.twimg.com/a/1526339738/img/animations/web_heart_animation_edge.png);
+        width: 100px;
+        height: 100px;
+        background-position: 0px 0;
+        transition-property:background-position;
+        transition-timing-function:steps(27);
+    }
+    #star:hover{
+        background-position: -100px 0;
+        transition-duration:1ms;
+    }
+    #clickbox{
+        display: none;
+    }
+    #clickbox:checked+label #star{
+        background-position: -2800px 0;
+        transition-duration:0.4s;
+    }
+    /* ************************引伸框*********************** */
+
+    </style>
+</head>
+<body>
+    <input type="checkbox" id="click">
+            <label id="lab-1" for="click">
+                <section id="checkbox-a"></section>
+                <div id="checkbox-c"></div>  
+                <div id="checkbox-b"></div>    
+            </label>
+    <br>
+    <br>   
+     <input type="checkbox" id="clickbox"><label id="lab-2" for="clickbox"><div id="star"></div></label>
+</body>
+</html>

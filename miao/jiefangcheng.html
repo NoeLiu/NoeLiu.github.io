@@ -1,0 +1,47 @@
+<script>
+    var a=prompt('a:');
+    var b=prompt('b:');
+    var c=prompt('c:');
+    var delta=b*b-4*a*c;
+    var x;
+    var x1;
+    var x2;
+    var i;
+    if(delta>0){
+    x1=(-b+Math.sqrt(b*b-4*a*c))/(2*a);
+    x2=(-b-Math.sqrt(b*b-4*a*c))/(2*a);
+    document.write(a+'x**2'+'+'+b+'x'+'+'+c+'=0'+'方程有两个不同的根'+'<br>');
+    document.write('第一个根为：'+x1);
+    document.write('第二个根为：'+x2);
+    }else if(delta==0){
+    x=(-b)/(2*a);  
+    document.write('方程有两个相同的根'+'<br>');
+    document.write('相同的根为：'+x) ;
+    }else{
+    x=(-b)/(2*a);
+    x1=(Math.sqrt(4*a*c-b*b))/(2*a);
+    x2=-((Math.sqrt(4*a*c-b*b))/(2*a));
+    document.write('方程有两个不同的复数根'+'<br>');
+    document.write('第一个根为：'+x+'+'+x1+'i');
+    document.write('第二个根为：'+x+x2+'i');
+    }    
+</script>
+<script>
+    var a=prompt('a:');
+    var b=prompt('b:');
+    var c=prompt('c:');
+    var d=prompt('d:');
+    var e=prompt('e:');
+    var f=prompt('f:');
+    var x,y;
+    if(a*e-b*d==0&&c*d-f*a!==0){
+    document.write('抱歉，无解');
+    }else if(a*e-b*d!==0){
+    x=(c*e-b*f)/(a*e-b*d);
+    y=(d*c-a*f)/(b*d-a*e);
+    document.write('x='+x+'<br>');
+    document.write('y='+y);
+    }else if(a*e-b*d==0&&c*d-f*a==0){
+    document.write('方程有无穷多解');
+    } 
+</script>
